@@ -20,6 +20,7 @@
                     ></a>
                 </li>
             </div>
+            <div class="tabs-component-border"></div>
         </ul>
         <div class="tabs-component-panels">
             <slot/>
