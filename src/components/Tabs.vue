@@ -1,31 +1,30 @@
 <template>
     <div class="tabs-component">
-    <div class="tabs-component-border">
-            <ul role="tablist" class="tabs-component-tabs">
-                <div class="tabs-component-wrapper">
-                    <li
-                        v-for="(tab, i) in tabs"
-                        :key="i"
-                        :class="{ 'is-active': tab.isActive, 'is-disabled': tab.isDisabled }"
-                        class="tabs-component-tab"
-                        role="presentation"
-                        v-show="tab.isVisible"
-                    >
-                        <a v-html="tab.header"
-                           :aria-controls="tab.hash"
-                           :aria-selected="tab.isActive"
-                           @click="selectTab(tab.hash, $event)"
-                           :href="tab.hash"
-                           class="tabs-component-tab-a"
-                           role="tab"
-                        ></a>
-                    </li>
-                </div>
-            </ul>
-        </div>
-        <div class="tabs-component-panels">
-            <slot/>
-        </div>
+        <ul role="tablist" class="tabs-component-tabs">
+            <div class="tabs-component-wrapper">
+                <li
+                    v-for="(tab, i) in tabs"
+                    :key="i"
+                    :class="{ 'is-active': tab.isActive, 'is-disabled': tab.isDisabled }"
+                    class="tabs-component-tab"
+                    role="presentation"
+                    v-show="tab.isVisible"
+                >
+                    <a v-html="tab.header"
+                       :aria-controls="tab.hash"
+                       :aria-selected="tab.isActive"
+                       @click="selectTab(tab.hash, $event)"
+                       :href="tab.hash"
+                       class="tabs-component-tab-a"
+                       role="tab"
+                    ></a>
+                </li>
+            </div>
+        </ul>
+        <div class="tabs-component-border"></div>
+    </div>
+    <div class="tabs-component-panels">
+        <slot/>
     </div>
 </template>
 
