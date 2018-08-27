@@ -1,7 +1,7 @@
 <template>
     <div class="tabs-component">
         <ul role="tablist" class="tabs-component-tabs">
-            <div>
+            <div class="tabs-component-wrapper">
                 <li
                     v-for="(tab, i) in tabs"
                     :key="i"
