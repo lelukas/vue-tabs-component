@@ -22,9 +22,9 @@
             </div>
         </ul>
         <div class="tabs-component-border"></div>
-    </div>
-    <div class="tabs-component-panels">
-        <slot/>
+        <div class="tabs-component-panels">
+            <slot/>
+        </div>
     </div>
 </template>
 
